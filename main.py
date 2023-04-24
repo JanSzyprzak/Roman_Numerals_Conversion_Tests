@@ -1,3 +1,3 @@
 
-def converter():
+def converter(number):
     pass
