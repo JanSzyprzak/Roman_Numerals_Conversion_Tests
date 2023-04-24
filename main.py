@@ -1,8 +1,6 @@
 
 def converter(number):
-    if type(number)==str:
-        number = set(number)
-        symbols = {
+    symbols = {
             "M": 1000,
             "D": 500,
             "C": 100,
@@ -12,9 +10,19 @@ def converter(number):
             "I": 1
 
         }
+    
+    if type(number)==str:
+        number = set(number)
+        
         result = 0
         for k, v in symbols.items():
             if k in number:
                 result += v
         return int(result)
     
+    elif type(number)==int:
+        result = 0
+        for k, v in symbols.items():
+            if v == number:
+                result = k
+                return result
