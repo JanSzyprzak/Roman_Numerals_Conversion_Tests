@@ -11,18 +11,16 @@ def converter(number):
 
         }
     
-    if type(number)==str:
-        number = set(number)
+    result = 0
+    for k, v in symbols.items():
         
-        result = 0
-        for k, v in symbols.items():
+        if type(number)==str:
+            number = set(number)
             if k in number:
                 result += v
-        return int(result)
-    
-    elif type(number)==int:
-        result = 0
-        for k, v in symbols.items():
+                return int(result)
+        
+        elif type(number)==int:
             if v == number:
                 result = k
                 return result
