@@ -15,9 +15,13 @@ def test_if_converter_accepts_one_argument():
         assert False, "Converter accepts one argument"
 
 def test_if_converter_converts_basic_roman_numerals_to_int():
-    numerals = converter("MDCX")
+    numerals = converter("D")
     assert type(numerals) == int 
 
 def test_if_converter_converts_int_to_basic_roman_numerals():
     numeral = converter(500)
     assert type(numeral) == str 
+
+def test_if_converter_converts_complex_roman_numerals_to_int():
+    numeral = converter("MDCCLIX")
+    assert numeral == 1759
