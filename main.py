@@ -15,7 +15,6 @@ def converter(number):
     for k, v in symbols.items():
         
         if type(number)==str:
-            number = set(number)
             if k in number:
                 result += v
                 return int(result)
@@ -24,3 +23,7 @@ def converter(number):
             if v == number:
                 result = k
                 return result
+            
+
+
+print(converter("D"))
