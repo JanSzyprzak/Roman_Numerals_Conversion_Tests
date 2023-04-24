@@ -17,3 +17,7 @@ def test_if_converter_accepts_one_argument():
 def test_if_converter_converts_basic_roman_numerals_to_int():
     numerals = converter("MDCX")
     assert type(numerals) == int 
+
+def test_if_converter_converts_int_to_basic_roman_numerals():
+    numeral = converter(500)
+    assert type(numeral) == str 
