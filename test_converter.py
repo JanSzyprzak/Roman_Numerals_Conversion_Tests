@@ -25,3 +25,7 @@ def test_if_converter_converts_int_to_basic_roman_numerals():
 def test_if_converter_converts_complex_roman_numerals_to_int():
     numeral = converter("MDCCLIX")
     assert numeral == 1759
+
+def test_if_converter_converts_complex_int_into_roman_numerals():
+    numeral = converter(1759)
+    assert numeral == "MDCCLIX"
